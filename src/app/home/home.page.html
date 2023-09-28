@@ -42,8 +42,6 @@
     <button type="button" (click)="takeSample()"></button>
   </div>
 
-  <ion-button (click)="closeCamera()" class="overlay" *ngIf="isCameraActive">Stop</ion-button>
-
   <div class="progress-bar-container" *ngIf="isCameraActive && cameraState === 'Scanning'">
     <span style="font-weight: bold;">{{ barProgress * 100 | number:'2.0-0' }}%</span>
     <ion-progress-bar [value]="barProgress" color="success"></ion-progress-bar>
